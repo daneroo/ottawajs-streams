@@ -1,0 +1,25 @@
+{
+  "name": "ottawajs-streams",
+  "version": "0.0.1",
+  "description": "Demonstrate new streams functionality",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/daneroo/ottawajs-streams"
+  },
+  "keywords": [
+    "streams",
+    "node.js"
+  ],
+  "author": "Daniel Lauzon",
+  "license": "BSD",
+  "engines": {
+    "node": "~0.8.0"
+  },
+  "dependencies": {
+    "readable-stream" : "~1.0.2"
+  }
+}
