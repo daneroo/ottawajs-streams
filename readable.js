@@ -10,7 +10,7 @@ DigitStream.prototype = Object.create(Readable.prototype, {
 
 function DigitStream(options) {
   Readable.call(this, options);
-  this.totalDigits=1000;
+  this.totalDigits=10000;
 }
 
 function digit(){
@@ -19,11 +19,11 @@ function digit(){
 
 DigitStream.prototype._read  = function(size) {
   // console.log('_read was called size=%d',size);
-  if (this.totalDigits-->0){
+  if (this.totalDigits-- > 0){
     var r = this.push(digit());
     // console.error('push returned %j',r);
   } else {
-    console.log('\n');
+    // console.log('\n');
     this.push(null)
   }
 
