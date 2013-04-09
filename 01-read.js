@@ -1,24 +1,17 @@
 var DigitStream = require('./digit-stream');
+var colors = require('colors');
 
-// new DigitStream().pipe(process.stdout)
-var ds = new DigitStream({encoding:'utf8'});
+var ds = new DigitStream({encoding:'utf8',totalDigits: 1<<18 });
 
-ds.on('readable', function() {
-  console.error('readable(%d,%d):',ds.totalRead,ds.totalPushed);
-  ds.read(0);
-  console.error('readable(%d,%d):',ds.totalRead,ds.totalPushed);
-});
-
+var totalRead=0;
 while (true){
-  var b = ds.read(4096);
-  // var b = ds.read();
+  var b = ds.read(8);
   if(b && b.length){
-    ds.totalRead+=b.length;
-    console.error('read(%d):',ds.totalRead);
-    console.log(b);
-  }
-  if(b===null){
-    console.log('done reading:',b);
+    totalRead+=b.length;
+    console.log('read %s len:%d, total:%d',b.red,b.length,totalRead);
+  } else {
+  // if(b===null){
+    console.error('done reading total:',totalRead);
     break;
   }
 }
