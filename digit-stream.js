@@ -4,6 +4,8 @@ if (!Readable) {
   Readable = require('readable-stream/readable');
 }
 
+// util.inherits(DigitStream, Readable);
+
 DigitStream.prototype = Object.create(Readable.prototype, {
   constructor: { value: DigitStream }
 });
