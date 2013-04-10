@@ -13,6 +13,12 @@
         node 03-write.js
         cat green-stream.js |node 03-write.js
 
+        04-pipe green digits
+        node 04-pipe.js
+
+        transform
+        node 05-backpressure.js
+
 # References
 
 * [DailyJS intro](http://dailyjs.com/2012/12/21/components-holler-gruntstart/)
