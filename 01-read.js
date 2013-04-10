@@ -10,7 +10,7 @@ while (true){
     totalRead+=b.length;
     console.log('read %s len:%d, total:%d',b.red,b.length,totalRead);
   } else {
-  // if(b===null){
+    // if(b===null){
     console.error('done reading total:',totalRead);
     break;
   }
