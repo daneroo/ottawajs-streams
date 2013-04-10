@@ -124,7 +124,28 @@ another way. This is the way of IO also.<br>
       <section>
         <h2>Readable</h2>
         <ul>
-          <li>Thing</li>
+          <li>inherit from Readable</li>
+          <li>implement <code>_read(size)</code></li>
+          <li>call <code>push()</code></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Writeable</h2>
+        <ul>
+          <li>inherit from Writeable</li>
+          <li>implement <code>_write(chunk, encoding, callback)</code></li>
+          <li>invoke <code>callback()</code></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>References</h2>
+        <ul>
+          <li><a href="http://nodejs.org/api/stream.html">Node.js docs</a></li>
+          <li><a href="http://dailyjs.com/2013/04/01/streams-streams-streams/">DailyJS intro</a></li>
+          <li><a href="http://blog.nodejs.org/2012/12/21/streams2/">Node.js blog announcement</a></li>
+          <li><a href="https://github.com/substack/stream-handbook">substack / stream-handbook</a></li>
         </ul>
       </section>
 
