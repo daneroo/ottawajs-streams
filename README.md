@@ -1,5 +1,5 @@
 
-# OttawaJS Talk: Strames
+# OttawaJS Talk: Streams
 
 This branch contains the slide deck.
 See them [online here](http://daniel-lauzon.com/ottawajs-streams/).
