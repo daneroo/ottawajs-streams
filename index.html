@@ -127,6 +127,7 @@ another way. This is the way of IO also.<br>
           <li>inherit from Readable</li>
           <li>implement <code>_read(size)</code></li>
           <li>call <code>push()</code></li>
+          <li><code>DigitStream, 01-read.js, 02-pipe.js</code></li>          
         </ul>
       </section>
 
@@ -136,6 +137,25 @@ another way. This is the way of IO also.<br>
           <li>inherit from Writeable</li>
           <li>implement <code>_write(chunk, encoding, callback)</code></li>
           <li>invoke <code>callback()</code></li>
+          <li><code>GreenStream, 03-write.js, 04-pipe.js</code></li>          
+        </ul>
+      </section>
+
+      <section>
+        <h2>Transform</h2>
+        <ul>
+          <li>inherit from Transform</li>
+          <li>implement <code>_transform(chunk, encoding, callback)</code></li>
+          <li><code>SlowStream, 05-backpressure.js</code></li>          
+        </ul>
+      </section>
+
+      <section>
+        <h2>Composability</h2>
+        <ul>
+          <li>Using pipes</li>
+          <li><code>DigitStream, PrimeStream, SlowStream</code></li>          
+          <li><code>06-alltogether.js</code></li>          
         </ul>
       </section>
 
