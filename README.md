@@ -1,6 +1,8 @@
 # OttawaJS streams talk
 
-## script
+## Slide Deck
+See the gh-pages branch for the slides,
+or [online here](http://daniel-lauzon.com/ottawajs-streams/).
 
         Readable - digit-stream
         use it (01-read.js)
