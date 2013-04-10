@@ -23,6 +23,12 @@ Here are the notes
         transform
         node 05-backpressure.js
 
+## References
+
+* [Node.js docs](http://nodejs.org/api/stream.html)
+* [DailyJS intro](http://dailyjs.com/2012/12/21/components-holler-gruntstart/)
+* [Node.js blog announcement](http://blog.nodejs.org/2012/12/21/streams2/)
+* [substack / stream-handbook](https://github.com/substack/stream-handbook)
 
 ## License
 

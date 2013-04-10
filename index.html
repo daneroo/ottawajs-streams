@@ -71,12 +71,62 @@
         </ul>
       </section>
 
-	    <section>
-	      <h2>Readable</h2>
-	      <ul>
-	        <li>Thing</li>
-	      </ul>
-	    </section>
+      <section>
+        <h2>What are streams</h2>
+        <blockquote >
+            We should have some ways of connecting programs like garden hose--screw in
+another segment when it becomes necessary to massage data in
+another way. This is the way of IO also.<br>
+--Doug Mcilroy '64
+          </blockquote>
+        <ul>
+          <li>Modeled after Unix I/O</li>
+          <li>Used to process data in stages</li>
+        </ul>
+        <pre><code contenteditable>
+          grep daniel README.md |sed -e "s/daniel/daneroo/g"
+        </code></pre>
+      </section>
+
+      <section>
+        <h2>Examples</h2>
+        <ul>
+          <li>fs.ReadStream, fs.WriteStream</li>
+          <li>tcp/tls Socket objects</li>
+          <li>http request/response</li>
+          <li>zlib, stdio, etc</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Updates in node 0.10</h2>
+        <ul>
+          <li>referred to as streams2</li>
+          <li>Compatible 0.8<-->0.10</li>
+          <li>Simpler API</li>
+          <li>Used for core <code>fs/zlib/crypto/http/tls/tcp</code></li>
+          <li>Consistent behavior (pause(), lost 'data')</li>
+          <li>Buffering and backpressure implementation</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Kinds of streams</h2>
+        <ul>
+          <li class="fragment grow">Readable</li>
+          <li class="fragment grow">Writeable</li>     
+          <li class="fragment grow">Transform</li>
+          <li class="fragment grow">Duplex</li>
+          <li class="fragment  grow">Passthrough</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Readable</h2>
+        <ul>
+          <li>Thing</li>
+        </ul>
+      </section>
 
   
 <!--
