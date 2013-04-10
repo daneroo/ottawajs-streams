@@ -1,7 +1,7 @@
 var DigitStream = require('./digit-stream');
 var GreenStream = require('./green-stream');
 
-var ds = new DigitStream({encoding:'utf8'});
-var gs = new GreenStream(); 
+var digits = new DigitStream({encoding:'utf8', totalDigits: 1<<17});
+var greener = new GreenStream(); 
 
-ds.pipe(gs);
+digits.pipe(greener);
