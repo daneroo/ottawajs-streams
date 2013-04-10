@@ -15,13 +15,11 @@ function SlowStream(options) {
 }
 
 function slowType(chunk,ss,callback){
-  // process.stdout.write(chunk.slice(0,1));
   ss.push(chunk.slice(0,1))
-  // process.stdout.write(chunk.slice(0,1));
   if (chunk.length>1){
     setTimeout(function(){
-      slowType(readable,chunk.slice(1),ss.delay,callback);
-    },delay);
+      slowType(chunk.slice(1),ss,callback);
+    },ss.delay);
   } else {
     if(callback) setTimeout(callback,ss.delay);
   }
